@@ -1,6 +1,6 @@
 # 一个不用配环境、100% 跑在本地的私有知识库工具
 
-![img](https://soure.oss-cn-hangzhou.aliyuncs.com/img/asynccode)
+![video_cover_obsidian](https://soure.oss-cn-hangzhou.aliyuncs.com/img/video_cover_obsidian.jpg)
 
 \> 做这个小工具的初衷很纯粹：**我实在受够了为了本地搜个笔记，还得装 Docker、配 Python 环境和折腾复杂的向量数据库了。** **下载地址:**
 
