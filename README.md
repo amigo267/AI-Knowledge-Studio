@@ -5,8 +5,8 @@
 \> 做这个小工具的初衷很纯粹：**我实在受够了为了本地搜个笔记，还得装 Docker、配 Python 环境和折腾复杂的向量数据库了。
 
  **下载地址:**
+ 
 安装版：https://osstest.yoximi.com/soft/knowledge/AI_Knowledge_Studio_Setup_v1.0.exe
-
 绿色版：https://osstest.yoximi.com/soft/knowledge/LocalKnowledgeAI_v1.0_Portable.zip
 
 ### **一、我为什么要做这个工具？**
