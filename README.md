@@ -2,13 +2,7 @@
 
 ![video_cover_obsidian](https://soure.oss-cn-hangzhou.aliyuncs.com/img/video_cover_obsidian.jpg)
 
-\> 做这个小工具的初衷很纯粹：**我实在受够了为了本地搜个笔记，还得装 Docker、配 Python 环境和折腾复杂的向量数据库了。
-
- **下载地址:**
- 
-安装版：https://osstest.yoximi.com/soft/knowledge/AI_Knowledge_Studio_Setup_v1.0.exe
-
-绿色版：https://osstest.yoximi.com/soft/knowledge/LocalKnowledgeAI_v1.0_Portable.zip
+\> 做这个小工具的初衷很纯粹：**我实在受够了为了本地搜个笔记，还得装 Docker、配 Python 环境和折腾复杂的向量数据库了。**
 
 ### **一、我为什么要做这个工具？**
 
@@ -24,7 +18,7 @@
 
 4. **自己画的架构图成了盲区**：在 Obsidian 里用 Excalidraw 画了大量的业务流程图和技术架构图，市面上的工具全部抓瞎，根本看不懂图里的拓扑和箭头走向。
 
-   ![preview_drawer_mermaid](https://soure.oss-cn-hangzhou.aliyuncs.com/img/preview_drawer_mermaid.png)
+   ![preview_drawer_excalidraw](https://soure.oss-cn-hangzhou.aliyuncs.com/img/preview_drawer_excalidraw.png)
 
 为了彻底解决自己的这些刚需，我花时间写了这款独立的 Windows 原生桌面端应用——**没有套路，开箱即用，所有文档和计算全部留在你自己的电脑里。**
 
@@ -89,6 +83,12 @@
 
 ### **四、怎么开始体验？**
 
+ **下载地址:**
+
+安装版：https://osstest.yoximi.com/soft/knowledge/AI_Knowledge_Studio_Setup_v1.0.exe
+
+绿色版：https://osstest.yoximi.com/soft/knowledge/LocalKnowledgeAI_v1.0_Portable.zip
+
 软件不需要复杂的安装流程，拿到后只有两步：
 
 1. 解压压缩包，双击里面的 `LocalKnowledgeAI.exe`（绿色运行，不写系统注册表垃圾）；
@@ -98,8 +98,16 @@
 
 ## **❓ 常见问题（FAQ）**
 
+
+
 - **Q：我的电脑配置不高，能流畅运行吗？**   A：完全可以！本桌面端经过深度优化，体积仅约 40MB，界面流畅轻快；若选用云端大模型（如 DeepSeek），普通办公轻薄本甚至几年前的旧电脑都能流畅秒开。
+
 - **Q：我的数据会上传到外部服务器吗？**   A：绝对不会。文档检索、切分与特征计算全在本地机器完成；搭配本地 Ollama 运行时，更是 100% 物理脱网运行，无任何泄密风险。
+
 - **Q：更换电脑后还可以继续使用吗？**   A：支持一机一码安全授权，如遇正常更换设备或重装系统，凭购买记录联系客服即可轻松免费迁移。
+
+  ---
+
+  
 
 *代码由个人独立精心维护，感谢每一位注重数据主权与效率的朋友的支持。*
