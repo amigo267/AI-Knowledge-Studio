@@ -7,6 +7,7 @@
  **下载地址:**
  
 安装版：https://osstest.yoximi.com/soft/knowledge/AI_Knowledge_Studio_Setup_v1.0.exe
+
 绿色版：https://osstest.yoximi.com/soft/knowledge/LocalKnowledgeAI_v1.0_Portable.zip
 
 ### **一、我为什么要做这个工具？**
