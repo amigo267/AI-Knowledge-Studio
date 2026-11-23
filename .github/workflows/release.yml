@@ -1,0 +1,61 @@
+name: Publish GitHub Release
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag (e.g. v1.0.0)"
+        required: true
+        default: "v1.0.0"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Prepare Release Metadata & Checksums
+        id: meta
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            TAG="${{ github.event.inputs.tag }}"
+          else
+            TAG="${GITHUB_REF#refs/tags/}"
+          fi
+          echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+
+          mkdir -p release_assets
+          cp dist_installer/AI_Knowledge_Studio_Setup_v1.0.exe release_assets/
+          cp dist_releases/LocalKnowledgeAI_v1.0_Portable.zip release_assets/
+          (cd release_assets && sha256sum AI_Knowledge_Studio_Setup_v1.0.exe LocalKnowledgeAI_v1.0_Portable.zip > SHA256SUMS.txt)
+          cat release_assets/SHA256SUMS.txt
+
+      - name: Create or Update GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${{ steps.meta.outputs.tag }}"
+          TITLE="AI Knowledge Studio ${TAG} — 本地私有 AI 知识库桌面端"
+          if gh release view "${TAG}" >/dev/null 2>&1; then
+            gh release edit "${TAG}" --title "${TITLE}" --notes-file RELEASE_NOTES.md
+            gh release upload "${TAG}" \
+              release_assets/AI_Knowledge_Studio_Setup_v1.0.exe \
+              release_assets/LocalKnowledgeAI_v1.0_Portable.zip \
+              release_assets/SHA256SUMS.txt \
+              --clobber
+          else
+            gh release create "${TAG}" \
+              release_assets/AI_Knowledge_Studio_Setup_v1.0.exe \
+              release_assets/LocalKnowledgeAI_v1.0_Portable.zip \
+              release_assets/SHA256SUMS.txt \
+              --title "${TITLE}" \
+              --notes-file RELEASE_NOTES.md
+          fi
