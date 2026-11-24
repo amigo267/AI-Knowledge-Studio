@@ -18,7 +18,6 @@
 > 🚀 **国内高速镜像下载**（如 GitHub 下载较慢）：
 > - 安装版：https://osstest.yoximi.com/soft/knowledge/AI_Knowledge_Studio_Setup_v1.0.exe
 > - 绿色版：https://osstest.yoximi.com/soft/knowledge/LocalKnowledgeAI_v1.0_Portable.zip
-> - 📖 **完整图文使用说明（飞书文档）**：https://ycnkcvfjy3lc.feishu.cn/wiki/ZeLgwN2gViuFm6khrEmc457AnIx?from=from_copylink
 
 ---
 
