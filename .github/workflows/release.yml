@@ -45,7 +45,7 @@ jobs:
           TAG="${{ steps.meta.outputs.tag }}"
           TITLE="AI Knowledge Studio ${TAG} — 本地私有 AI 知识库桌面端"
           if gh release view "${TAG}" >/dev/null 2>&1; then
-            gh release edit "${TAG}" --title "${TITLE}" --notes-file RELEASE_NOTES.md
+            gh release edit "${TAG}" --title "${TITLE}" --notes-file RELEASE_NOTES.md --draft=false --latest
             gh release upload "${TAG}" \
               release_assets/AI_Knowledge_Studio_Setup_v1.0.exe \
               release_assets/LocalKnowledgeAI_v1.0_Portable.zip \
@@ -57,5 +57,6 @@ jobs:
               release_assets/LocalKnowledgeAI_v1.0_Portable.zip \
               release_assets/SHA256SUMS.txt \
               --title "${TITLE}" \
-              --notes-file RELEASE_NOTES.md
+              --notes-file RELEASE_NOTES.md \
+              --latest
           fi
